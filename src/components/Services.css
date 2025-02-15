@@ -1,0 +1,34 @@
+.service-container {
+  position: relative;
+  /* height: 200vh;  */
+  /* overflow: hidden; */
+}
+
+.core-values {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24px;
+  z-index: 1; 
+}
+
+.ourteam {
+  position: absolute;
+  /* top: 100vh; Starts halfway through */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgb(245, 206, 206);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 2; /* Higher z-index to appear on top */
+  transition: transform 0.3s ease-out;
+}
