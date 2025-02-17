@@ -1,0 +1,82 @@
+.services {
+  padding-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-team-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(5, 66, 17);
+}
+
+.pictures {
+  width: 100%;
+  display: flex;
+  height: 700px;
+  justify-content: center;
+}
+
+.pic-1 {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  justify-content: center;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 410px;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.box1 {
+  background-color: rgb(42, 165, 97);
+  margin-top: 2%;
+}
+
+.box2 {
+  background-color: rgb(83, 42, 165);
+  margin-top: 40%;
+}
+
+.box3 {
+  background-color: rgb(115, 131, 26);
+  margin-top: 66%;
+}
+
+.box4 {
+  background-color: rgb(209, 24, 166);
+  margin-top: 26%;
+}
+
+.box5 {
+  background-color: rgb(56, 82, 190);
+  margin-top: 76%;
+}
+
+.box6 {
+  background-color: rgb(19, 178, 231);
+  margin-top: 16%;
+}
+
+/* Hover effects */
+.box1:hover, .box2:hover, .box3:hover, .box4:hover, .box5:hover, .box6:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.486); /* Add shadow */
+}
