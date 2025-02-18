@@ -25,12 +25,12 @@ const CoreValues = () => {
                 <div className="core">
                     <h1>CORE VALUES</h1>
                     <div className='core_values_para'>
-                    <p>Excellence: Commitment to delivering high-quality advisory services and training programs.</p>
-                    <p>Collaboration: Building strong partnerships with educational institutions and industry leaders.</p>
-                    <p>Innovation: Embracing creativity and technology to redefine learning experiences.</p>
-                    <p>Integrity: Upholding ethical practices and transparency in all operations.</p>
-                    <p>Empowerment: Enabling individuals and institutions to unlock their full potential.</p>
-                    <p>Global Mindset: Fostering cross-cultural understanding and global academic exchange.</p>
+                    <p><b>Excellence:</b> Commitment to delivering high-quality advisory services and training programs.</p>
+                    <p><b>Collaboration:</b> Building strong partnerships with educational institutions and industry leaders.</p>
+                    <p><b>Innovation:</b> Embracing creativity and technology to redefine learning experiences.</p>
+                    <p><b>Integrity:</b> Upholding ethical practices and transparency in all operations.</p>
+                    <p><b>Empowerment:</b> Enabling individuals and institutions to unlock their full potential.</p>
+                    <p><b>Global Mindset:</b> Fostering cross-cultural understanding and global academic exchange.</p>
                     </div>
                     
                 </div>
