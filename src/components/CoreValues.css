@@ -1,0 +1,126 @@
+.container-cv {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, orange, red);
+  /* margin-top: 8%; */
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.img-girl {
+  position: relative;
+  background: rgba(207, 18, 18, 0);
+  height: 100%;
+  width: 40%;
+  z-index: 2;
+}
+
+.img-girl img {
+  position: absolute;
+  height: 70%;
+  bottom: 0;
+  left: 50%;
+}
+
+.core-suc {
+  /* position: absolute;
+  top: 10px; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding-top: 1%; */
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  /* background: blue; */
+  padding: 20px;
+  line-height: 1.6px;
+}
+.core_values_para{
+  margin-left: 10%;
+  line-height: 1.2rem;
+}
+
+.core h1 {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.core p{
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.container-man {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  margin-top: 10px;
+  background: rgba(0, 128, 0, 0);
+}
+.container-man h1{
+  font-size: 2.5rem ;
+}
+
+
+.contain {
+  width: 20%;
+  height: 30%;
+  background: white;
+  border: 2px solid white;
+  box-shadow: 5px 5px 15px rgba(255, 140, 0, 0.7);
+  position: absolute;
+  top: 60%;
+  left: 100vw;
+  transform: translateY(-50%);
+  animation: moveBox 10s linear infinite;
+  border-radius: 50px;
+  color: rgb(14, 14, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.a1 { animation-delay: 0s; }
+.b1 { animation-delay: 2s; }
+.c1 { animation-delay: 4s; }
+.d1 { animation-delay: 6s; }
+.e1 { animation-delay: 8s; }
+
+@keyframes moveBox {
+  0% { left: 100vw; }
+  100% { left: -20vw; }
+}
+
+.contain.paused {
+  animation-play-state: paused;
+}
+
+@media (max-width: 475px) {
+  .img-girl {
+      position: absolute;
+      top: 50%;
+      width: 120px;
+      height: 300px;
+  }
+}
