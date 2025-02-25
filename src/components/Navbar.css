@@ -1,0 +1,152 @@
+.navbar {
+  position: sticky;
+  top: 10px;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.277);
+  padding: 15px 30px;
+  border-radius: 35px;
+  background: white;
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.277);
+  padding: 15px 30px;
+  border-radius: 35px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #e3410b;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #de0f0f;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger .line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-container {
+    position: fixed;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border-radius: 0;
+    z-index: 999;
+  }
+
+  .menu-container.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 20px 0;
+  }
+
+  .menu li a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    color: #e3410b;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .menu li a {
+    font-size: 1.2rem;
+  }
+}
