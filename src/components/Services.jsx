@@ -9,6 +9,7 @@ import pic3 from '../assests/prof/p3.jpg'
 import pic4 from '../assests/prof/p4.jpg'
 import pic5 from '../assests/prof/p6.jpg'
 import pic6 from '../assests/prof/p5.jpg'
+import Video from './Video';
 
 const teamMembers = [
   { id: 1, name: 'Prof. Joy Chowdhury', role: 'Managing Director and CEO', image: pic1, description: 'Prof. Joy Chowdhury is the Managing Director and CEO of Kairos Learning Universe. He is an eminent Learning and development professional, a motivator, and an emotional intelligence Coach. He has interacted, imparted and managed inter-disciplinary training for multiple clients across the globe. His professional stint encompasses a variety of Corporates and Academic Institutions as Vice President and Directorship. He has been awarded Icon of India by Business Talkz in 2024. A Guest Lecturer with multiple universities across Europe and India. Had been an integral part and led teams on educational projects and global knowledge transition. Innovative and experienced strategic leader with expertise in project management and creative problem-solving. Skilled in managing complex training, educational and knowledge management projects and innovative solution development. Committed to creating engaging and meaningful content for learners. A well-acclaimed motivational speaker and author. He is an experienced thought leader with expertise in project management and creative problem-solving. Skilled in project coordination, training management and innovative solution development. Detail-oriented team player with strong organizational skills. Ability to handle multiple projects simultaneously with a high degree of accuracy.', social: { facebook: '#', twitter: '#', google: '#' }
@@ -112,6 +113,7 @@ const Services = () => {
       )}
       
       <Blog />
+      <Video/>
       <Contact />
       <Footer />
     </div>
