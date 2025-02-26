@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./MovingBoxes.css";
-import car from '../assests/car.png'
+import car3 from '../assests/car3.png'
+import car4 from '../assests/car4.png'
+import car5 from '../assests/car5.png'
 import poster from '../assests/poster.png'
 const MovingBoxes = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -24,7 +26,7 @@ const MovingBoxes = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <img src={car} alt="" />
+            <img src={car3} alt="" />
             {/* <div className="an1">
               <p>gjshbjhdhvknfnd</p>
             </div> */}
@@ -34,21 +36,21 @@ const MovingBoxes = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <img src={car} alt="" />
+            <img src={car4} alt="" />
           </div>
           <div
             className={`cont c ${isPaused ? "paused" : ""}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <img src={car} alt="" />
+            <img src={car5} alt="" />
           </div>
           <div
         className={`cont d ${isPaused ? "paused" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <img src={car} alt="Car" />
+        <img src={car4} alt="Car" />
       </div>
         </div>
       </div>
