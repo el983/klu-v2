@@ -92,7 +92,7 @@ const Services = () => {
                 <ul className="social">
                   <li><a href={member.social.facebook}><i className="fab fa-facebook-f"></i></a></li>
                   <li><a href={member.social.twitter}><i className="fab fa-twitter"></i></a></li>
-                  <li><a href={member.social.google}><i className="fab fa-google-plus-g"></i></a></li>
+                  <li><a href={member.social.google}><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
                 <button className="show-more-btn" onClick={() => openPopup(member)}>Show More</button>
               </div>
