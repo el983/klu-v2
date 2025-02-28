@@ -24,7 +24,7 @@ const MovingBoxes = () => {
           <div className="video-bottom">
             {/* <h1>KAIROS LEARNING UNIVERSE</h1> */}
             <img src={logo} alt="" />
-            <h4>KAIROS LEARNING UNIVERSE</h4>
+            <p> A POSSE AD ESSE <br /> FROM POSSIBILITY TO ACTUALITY</p> 
           </div>
         </div>
         <div className="container-m">
