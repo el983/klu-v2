@@ -13,9 +13,7 @@ const Contact = () => {
                   <p className="text-blk contactus-head">
                     Contact us
                   </p>
-                  <p className="text-blk contactus-subhead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  
                 </div>
                 <div className="responsive-container-block">
                   <div className="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6">
@@ -75,10 +73,7 @@ const Contact = () => {
               <div className="text-content">
                 <p className="text-blk contactus-head">
                   Contact us
-                </p>
-                <p className="text-blk contactus-subhead">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                </p>                
               </div>
               <div className="workik-contact-bigbox">
                 <div className="workik-contact-box">
