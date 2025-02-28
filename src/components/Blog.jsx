@@ -86,7 +86,8 @@ const data = [
   {
     name: "How professional and skill development training is crucial for enhancing one’s employability.",
     img: blog123,
-    review: "Skills and knowledge are the engines of economic growth and social development ..."
+    review: "Skills and knowledge are the engines of economic growth and social development ...",
+    link
   },
   {
     name: "Human Development as a Concept.",
