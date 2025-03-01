@@ -42,6 +42,7 @@
   align-items: left;
   /* background: blue; */
   padding: 20px;
+  padding-bottom: 0;
   line-height: 1.6px;
 }
 
@@ -51,7 +52,7 @@
 }
 
 .core h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
   text-align: center;
@@ -88,8 +89,9 @@
   /* background: green; */
 }
 .container-man h1{
+  padding: 0;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .contain {
@@ -172,7 +174,17 @@
   }
 } */
 
-@media (max-width: 1090px){
+@media (max-width: 1025px){
+  /* .core{
+    background: blue;
+  } */
+  .core_values_para{
+    line-height: 1.2rem;
+  }
+  .container-man h1{
+    font-size: 2.5rem;
+    /* background: blue; */
+  }
   .contain{
     width:35% ;
     height: 50%;
@@ -188,7 +200,7 @@
   }
 
   .core h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 5px;
   }
 
@@ -201,12 +213,12 @@
   }
 
   .container-man h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .contain {
-    width: 35%;
-    height: 45%;
+    width: 38%;
+    height: 53%;
   }
 
 
@@ -219,6 +231,9 @@
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
+  .container-man h1{
+    font-size: 2rem;
+  }
 
   .img-girl {
     position: relative;
@@ -226,9 +241,9 @@
     height: 500px;
     width: 0px;
   }
-
+  
   .contain {
-    top: 50%;
+    top: 53%;
     animation: moveBox 20s linear infinite;
     width: 200px;
 
