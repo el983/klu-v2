@@ -73,11 +73,11 @@
 
 
 .cont {
-  width: 60%;
+  width: 55%;
   height: 300px;
   /* background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 166, 0)); */
   /* background: green; */
-  border: 2px solid white;
+  
   /* box-shadow: 5px 5px 15px rgba(91, 90, 89, 0.7); */
   position: absolute;
   left: 100vw;
