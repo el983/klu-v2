@@ -1,0 +1,133 @@
+/* .container-o{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+} */
+.container-o{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background:  rgb(113, 133, 101);
+}
+.top-div{
+    position: absolute;
+    width: 60%;
+    height:65%;
+    background: rgb(234, 241, 144);
+    color: rgb(19, 41, 1);
+    right:5%;
+    bottom: 14%;
+    border-radius: 20px;
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: right; */
+}
+.bottom-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width:48%;
+    height: 58%;
+    background: white;
+    z-index: 2;
+    border-radius: 20px;
+}
+.mis-vis{
+    width: 65%;
+    height: 100%;
+    /* background: gold; */
+    position: absolute;
+    top: -7%;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    /* left: 20%; */
+    /* position: absolute; */
+}
+.mission
+{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+    /* background: red; */
+}
+/* .vission{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: blue;
+} */
+
+.mission h3{
+    font-size: 2.2rem;
+}
+.mission p{
+    text-align: justify;
+    font-size: 1.2rem;
+}
+.mission p,.mission h3{
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+.bottom-div img{
+   
+    width:100%;
+    height: 100%;
+    border-radius:20px ;
+}
+@media screen and (max-width: 768px) {
+    .container-o {
+        flex-direction: column;
+        height: auto;
+    }
+    .bottom-div {
+        position: relative;
+        width: 90%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        z-index: 1;
+    }
+    .top-div {
+        position: relative;
+        width: 90%;
+        height: auto;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        color: rgb(1, 44, 1);
+        margin-bottom: 10px;
+    }
+    .mis-vis {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        
+    }
+    .mission p{
+        text-align: center;
+    }
+}
