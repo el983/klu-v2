@@ -9,6 +9,7 @@ import towards from '../assests/towards.webp'
 import digital from '../assests/digital.webp'
 import dead from '../assests/dead.webp'
 import how from '../assests/how.jpg'
+import higher from '../assests/higher.png'
 // Blog data (placed before the component)
 const data = [
   {
@@ -49,7 +50,7 @@ const data = [
   },
   {
     name: "Higher Emotional Intelligence in Blended Learning",
-    img: blog123,
+    img: higher,
     review: "Emotions are very complex state of mind and body...",
     link:pdf
   }
