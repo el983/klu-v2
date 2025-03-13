@@ -1,0 +1,366 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  overflow-x: hidden;
+  /* margin-bottom: -30px; */
+}
+
+/* First Section (Video) */
+.hero {
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  padding: 0 30px;
+  z-index: 2;
+  box-shadow: 100px 0px 50px rgb(255, 255, 255);
+}
+.hero video{
+  margin-top: 50px;
+}
+.video-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 40px; */
+  padding-top: 20px;
+  padding-bottom: 0;
+  /* background: blue; */
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  /* margin-bottom: 20px; */
+}
+.video-bottom h4{
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+.video-bottom p{
+  margin-top: 5px;
+}
+.video-bottom img{
+  margin-bottom: 0;
+  /* background: blue; */
+}
+.hero h1{
+  font-size: 3.5rem;
+  color: rgb(143, 11, 11);
+}
+
+.hero video {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.container-m {
+  display: flex;
+  /* gap: 50px; */
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 55%;
+  height: 100vh;
+  /* background:red; */
+}
+
+
+.cont {
+  width: 70%;
+  height: 400px;
+  /* background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 166, 0)); */
+  /* background: green; */
+  border: 2px solid white;
+  /* box-shadow: 5px 5px 15px rgba(91, 90, 89, 0.7); */
+  position: absolute;
+  left: 100vw;
+  animation: moveBox 15s linear infinite;
+  border-radius: 10px;
+  color: rgb(28, 28, 25);
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  font-size: 2.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* .an1{
+  
+  width: 50%;
+  height: 90%;
+  background: red;
+  margin-bottom: 20px;
+} */
+
+/* .cont p{
+  width: 20%;
+} */
+.cont img{
+  width: 100%;
+  height: 100%;
+}
+/* .cont p{
+  font-size: 30px;
+} */
+
+
+
+/* Hover Effect */
+.cont:hover {
+  transform: scale(1.1);
+  /* box-shadow: 8px 8px 20px rgba(94, 93, 92, 0.9); */
+}
+
+.a {
+  animation-delay: 0s;
+}
+
+.b {
+  animation-delay: 5s;
+}
+
+.c {
+  animation-delay: 10s;
+}
+/* .d{
+  animation-delay: 15s;
+} */
+
+.cont.paused {
+  animation-play-state: paused;
+}
+
+@keyframes moveBox {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -60px;
+  }
+} 
+/* .a1 { animation-delay: 0s; }
+.b1 { animation-delay: 3s; }
+.c1 { animation-delay: 6s; }
+.d1 { animation-delay: 9s; }
+
+@keyframes moveBox {
+  0% { left: 100vw; }
+  100% { left: -60vw; }
+} */
+
+.pqrs{
+  
+    width: 50%;
+    height: 300px;
+    /* background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 166, 0));
+    background: green; */
+    /* border: 2px solid white; */
+    /* box-shadow: 5px 5px 15px rgba(91, 90, 89, 0.7); */
+    position: absolute;
+    left: 100vw;
+    animation: moveBox 20s linear infinite;
+    border-radius: 10px;
+    color: rgb(28, 28, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+}
+.pqrs img{
+  width: 100%;
+  height: 100%;
+}
+.pqrs:hover {
+  transform: scale(1.1);
+  /* box-shadow: 8px 8px 20px rgba(94, 93, 92, 0.9); */
+}
+.pqrs.paused {
+  animation-play-state: paused;
+}
+.x {
+  animation-delay: 0s;
+}
+
+.y {
+  animation-delay: 5s;
+}
+
+.z {
+  animation-delay: 10s;
+}
+.w{
+  animation-delay: 15s;
+}
+
+
+
+@keyframes moveBox {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -200px;
+  }
+} 
+
+.third_container{
+  margin-top: 0px;
+  background: rgb(113, 133, 101);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.third_container p{
+  color: rgb(212, 201, 137);
+  font-size: 1.2rem;
+}
+.third_container h1{
+  color: rgb(255, 255, 255);
+  font-size: 2.7rem;
+  
+}
+
+/* Second Section (Heading + Moving Boxes) */
+.second-container {
+  display: flex;
+  width: 100%;
+  height: 60vh; /* Smaller height than the first section */
+  background: rgb(201, 218, 191);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+
+}
+
+.text-section {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 80px 20px 80px rgb(201, 218, 191);
+  z-index: 1;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: rgb(10, 59, 1);
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  color: rgb(1, 68, 1);
+  padding-left: 75px;
+  padding-right: 75px;
+
+}
+
+.second-container .container-m {
+  height: 60vh;
+}
+@media (max-width:768px) {
+  .cont{
+    width: 75%;
+  }
+  .third_container{
+    padding-left: 30px;
+  }
+}
+
+
+/* Responsive Design */
+@media  (max-width: 485px) {
+  .main-container {
+    position: relative;
+    margin-top: 150px;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+
+  }
+
+  .hero video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-m {
+    /* display: flex; */
+    width: 100%;
+    height: 50vh;
+    justify-content: space-between;
+    align-items: center;
+    /* background: blue; */
+    /* position: relative; */
+  }
+  .cont{
+    /* position: absolute; */
+    width:90% ;
+    height: 100%;
+    /* animation: moveBox 20s linear infinite; */
+    /* background: red; */
+    padding: 0;
+  }
+  .cont img{
+    max-width: none; /* Prevents width restriction */
+    max-height: none;
+    /* width: 100%; */
+    object-fit:cover;
+  }
+  
+  
+  
+  
+
+  .pqrs{
+    width: 70%;
+    height: 300px;
+  }
+
+  .second-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-section {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .text-section p{
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .second-container .container-m {
+    width: 100%;
+    height: 50vh;
+  }
+  .third_container{
+    padding-left: 20px;
+  }
+}

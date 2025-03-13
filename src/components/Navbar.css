@@ -1,0 +1,163 @@
+/* Navbar.css */
+.navbar {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  background-color: #ffffff00;
+  z-index: 1000;
+  overflow: hidden;
+  
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.logo-container {
+  display: flex;
+  margin-left: -40px;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.277);
+  padding: 20px 35px;
+  border-radius: 35px;
+  background: white;
+}
+
+.logo-img {
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.27);
+  padding: 20px 60px;
+  border-radius: 35px;
+  background: white;
+  margin-right: -10%;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #e3410b;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #de0f0f;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger .line.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .line.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .line.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 10px;
+  }
+
+  .logo-container {
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 50%; /* Add space between logo and hamburger */
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Smaller text for mobile */
+  }
+
+  .menu-container {
+    position: fixed;
+    top: 60px; /* Position below the navbar */
+    right: -100%; /* Hide menu off-screen by default */
+    max-height: 70vh; /* Limit height to 70% of the viewport height */
+    width: 250px;
+    background-color: #fff;
+    flex-direction: column;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: right 0.3s ease;
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+  }
+
+  .menu-container.active {
+    right: 20px; /* Slide menu into view */
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .menu li {
+    margin: 15px 0; /* Increased gap between menu items */
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: 20px; /* Add space between logo and hamburger */
+  }
+}
+@media (max-width: 450px) {
+  .logo-container{
+    margin-left: 10px;
+    width: 70%;
+  }
+  .logo-text{
+    font-size: .9rem;
+  }
+}

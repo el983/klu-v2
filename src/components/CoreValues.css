@@ -1,0 +1,295 @@
+.container-cv {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(224, 184, 2),rgb(245, 91, 1));
+  /* margin-top: 8%; */
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.img-girl {
+  position: relative;
+  background: rgba(207, 18, 18, 0);
+  height: 100%;
+  width: 40%;
+  z-index: 2;
+}
+
+.img-girl img {
+  position: absolute;
+  height: 70%;
+  bottom: 0;
+  left: 25%;
+}
+
+.core-suc {
+  /* position: absolute;
+  top: 10px; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* overflow: hidden; */
+  /* padding-top: 1%; */
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  /* background: blue; */
+  padding: 20px;
+  padding-bottom: 0;
+  line-height: 1.6px;
+}
+
+.core_values_para {
+  margin-left: 5%;
+  line-height: 1.2rem;
+}
+
+.core h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.core p {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.core_values_para p {
+  transition: all 0.3s ease-in-out;
+  /* cursor: pointer; */
+}
+
+.core_values_para p:hover {
+  background: rgba(128, 128, 128, 0.142);
+  transform: scale(1.05);
+  /* text-decoration: underline; */
+}
+
+.container-man {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  /* margin-top: 10px; */
+  /* background: green; */
+}
+.container-man h1{
+  padding: 0;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.contain {
+  width: 30%;
+  height: 40%;
+  background: rgb(200, 211, 163);
+  border: 6px solid rgb(255, 255, 255);
+  box-shadow: 5px 5px 15px rgba(243, 236, 226, 0.7);
+  position: absolute;
+  top: 60%;
+  left: 100vw;
+  transform: translateY(-50%);
+  animation: moveBox 15s linear infinite;
+  border-radius: 50px;
+  color: rgb(14, 14, 13);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.contain h3 {
+  margin: 5px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.contain p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+
+.a1 {
+  animation-delay: 0s;
+}
+
+.b1 {
+  animation-delay: 3s;
+}
+
+.c1 {
+  animation-delay: 6s;
+}
+
+.d1 {
+  animation-delay: 9s;
+}
+
+.e1 {
+  animation-delay: 12s;
+}
+
+@keyframes moveBox {
+  0% {
+    left: 100vw;
+  }
+
+  100% {
+    left: -60vw;
+  }
+}
+
+.contain.paused {
+  animation-play-state: paused;
+}
+
+/* @media (max-width: 475px) {
+  .img-girl {
+      position: absolute;
+      top: 50%;
+      width: 120px;
+      height: 300px;
+  }
+} */
+
+@media (max-width: 1025px){
+  /* .core{
+    background: blue;
+  } */
+  .core_values_para{
+    line-height: 1.2rem;
+  }
+  .container-man h1{
+    font-size: 2.5rem;
+    /* background: blue; */
+  }
+  .contain{
+    width:35% ;
+    height: 50%;
+  }
+  /* .img-girl{
+    height:1200px ;
+    top: 20%;
+    left: -5%;
+    
+  } */
+}
+/* @media (max-width: 870px){
+  .img-girl{
+    height: 950px;
+    top: 25%;
+  }
+} */
+
+@media (max-width: 768px) {
+  .img-girl {
+    position: relative;
+    height: 700px;
+    left: -2%;
+    top: 20%;
+  }
+
+  .core h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .core_values_para p {
+    font-size: 1rem;
+  }
+
+  .core_values_para {
+    line-height: 1rem;
+  }
+
+  .container-man h1 {
+    font-size: 2rem;
+  }
+
+  .contain {
+    width: 38%;
+    height: 53%;
+  }
+
+
+
+}
+
+@media (max-width:450px) {
+
+  .container-cv {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+  .container-man h1{
+    font-size: 2rem;
+  }
+
+  .img-girl {
+    position: relative;
+    top: 60%;
+    height: 500px;
+    width: 0px;
+  }
+  
+  .contain {
+    top: 53%;
+    animation: moveBox 20s linear infinite;
+    width: 200px;
+
+  }
+
+  .a1 {
+    animation-delay: 0s;
+  }
+
+  .b1 {
+    animation-delay: 4s;
+  }
+
+  .c1 {
+    animation-delay: 8s;
+  }
+
+  .d1 {
+    animation-delay: 12s;
+  }
+
+  .e1 {
+    animation-delay: 16s;
+  }
+
+  @keyframes moveBox {
+    0% {
+      left: 100vw;
+    }
+
+    100% {
+      left: -200vw;
+    }
+  }
+
+
+}
