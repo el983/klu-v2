@@ -368,12 +368,19 @@
 .gallery-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   overflow-x: auto;
   padding: 20px;
   height: 70vh;
   scroll-snap-type: x mandatory;
-  gap: 15px;
+  cursor: grab;
+  user-select: none;
+  /* gap: 15px; */
   background: rgb(0, 65, 0);
+}
+
+.gallery-container.active {
+  cursor: grabbing;
 }
 
 .gallery-container::-webkit-scrollbar {

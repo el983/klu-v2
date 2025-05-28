@@ -1,33 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./MovingBoxes.css";
-// import car3 from '../assests/car3.png'
-// import car4 from '../assests/car4.png'
-// import car5 from '../assests/car5.png'
-import wood1 from '../assests/20x.png'
-import wood2 from '../assests/21x.png'
-import wood3 from '../assests/22x.png'
-import poster from '../assests/poster.png'
-import logo from '../assests/logo.png'
-import custom from '../assests/custom1.png'
-import global from '../assests/global1.png'
-import advisory from '../assests/advisory1.png'
-import train from '../assests/train1.png'
-import a from '../assests/a.jpeg'
-import b from '../assests/b.jpeg'
-import c from '../assests/c.jpeg'
-import d from '../assests/d.jpeg'
-import e from '../assests/e.jpeg'
-import f from '../assests/f.jpeg'
+import wood1 from '../assests/20x.png';
+import wood2 from '../assests/21x.png';
+import wood3 from '../assests/22x.png';
+import poster from '../assests/poster.png';
+import logo from '../assests/logo.png';
+import custom from '../assests/custom1.png';
+import global from '../assests/global1.png';
+import advisory from '../assests/advisory1.png';
+import train from '../assests/train1.png';
+import a from '../assests/a.jpeg';
+import b from '../assests/b.jpeg';
+import c from '../assests/c.jpeg';
+import d from '../assests/d.jpeg';
+import e from '../assests/e.jpeg';
+import f from '../assests/f.jpeg';
 
 const MovingBoxes = () => {
-  const images = [
-    a,b,c,d,e,f
-  ];
-
+  const images = [a, b, c, d, e, f];
   const [isPaused, setIsPaused] = useState(false);
+  const galleryRef = useRef(null);
 
   const handleMouseEnter = () => setIsPaused(true);
   const handleMouseLeave = () => setIsPaused(false);
+
+  // Drag functionality for gallery
+  useEffect(() => {
+    const gallery = galleryRef.current;
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const handleMouseDown = (e) => {
+      isDown = true;
+      gallery.classList.add('active');
+      startX = e.pageX - gallery.offsetLeft;
+      scrollLeft = gallery.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      gallery.classList.remove('active');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      gallery.classList.remove('active');
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - gallery.offsetLeft;
+      const walk = (x - startX) * 1.5; // scroll speed multiplier
+      gallery.scrollLeft = scrollLeft - walk;
+    };
+
+    gallery.addEventListener('mousedown', handleMouseDown);
+    gallery.addEventListener('mouseleave', handleMouseLeave);
+    gallery.addEventListener('mouseup', handleMouseUp);
+    gallery.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      gallery.removeEventListener('mousedown', handleMouseDown);
+      gallery.removeEventListener('mouseleave', handleMouseLeave);
+      gallery.removeEventListener('mouseup', handleMouseUp);
+      gallery.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
     <>
@@ -36,10 +76,9 @@ const MovingBoxes = () => {
         <div className="hero">
           <video src="/video/graphic_1.mp4" autoPlay loop muted></video>
           <div className="video-bottom">
-            {/* <h1>KAIROS LEARNING UNIVERSE</h1> */}
             <img src={logo} alt="" />
             <h4>KAIROS LEARNING UNIVERSE</h4>
-            <p> A POSSE AD ESSE <br /> FROM POSSIBILITY TO ACTUALITY</p> 
+            <p>A POSSE AD ESSE <br /> FROM POSSIBILITY TO ACTUALITY</p>
           </div>
         </div>
         <div className="container-m">
@@ -49,7 +88,6 @@ const MovingBoxes = () => {
             onMouseLeave={handleMouseLeave}
           >
             <img src={wood1} alt="" />
-            
           </div>
           <div
             className={`cont b ${isPaused ? "paused" : ""}`}
@@ -65,12 +103,11 @@ const MovingBoxes = () => {
           >
             <img src={wood3} alt="" />
           </div>
-         
         </div>
       </div>
 
-
-      <div className="gallery-container">
+      {/* Draggable Image Gallery */}
+      <div className="gallery-container" ref={galleryRef}>
         {images.map((src, index) => (
           <div className="gallery-item" key={index}>
             <img src={src} alt={`Image ${index + 1}`} />
@@ -85,7 +122,7 @@ const MovingBoxes = () => {
           <p>Explore how KLU can assist you in achieving your goals with our wide range of services designed to empower individuals and institutions.</p>
         </div>
         <div className="container-m">
-        <div
+          <div
             className={`pqrs x ${isPaused ? "paused" : ""}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -115,6 +152,8 @@ const MovingBoxes = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer Section */}
       <div className="third_container">
         <h1>Empowering Education, Transforming Futures, Globally.</h1>
         <p>We focus on driving impactful change in education and professional development, while fostering global collaboration and innovation.</p>
