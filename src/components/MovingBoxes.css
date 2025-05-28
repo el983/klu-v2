@@ -375,6 +375,7 @@
   scroll-snap-type: x mandatory;
   cursor: grab;
   user-select: none;
+  scroll-behavior: smooth;
   /* gap: 15px; */
   background: rgb(0, 65, 0);
 }
