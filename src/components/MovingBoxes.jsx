@@ -12,7 +12,18 @@ import custom from '../assests/custom1.png'
 import global from '../assests/global1.png'
 import advisory from '../assests/advisory1.png'
 import train from '../assests/train1.png'
+import a from '../assests/a.jpeg'
+import b from '../assests/b.jpeg'
+import c from '../assests/c.jpeg'
+import d from '../assests/d.jpeg'
+import e from '../assests/e.jpeg'
+import f from '../assests/f.jpeg'
+
 const MovingBoxes = () => {
+  const images = [
+    a,b,c,d,e,f
+  ];
+
   const [isPaused, setIsPaused] = useState(false);
 
   const handleMouseEnter = () => setIsPaused(true);
@@ -56,6 +67,15 @@ const MovingBoxes = () => {
           </div>
          
         </div>
+      </div>
+
+
+      <div className="gallery-container">
+        {images.map((src, index) => (
+          <div className="gallery-item" key={index}>
+            <img src={src} alt={`Image ${index + 1}`} />
+          </div>
+        ))}
       </div>
 
       {/* Second Section (Heading + Moving Boxes) */}
