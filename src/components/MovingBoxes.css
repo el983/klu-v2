@@ -450,3 +450,10 @@
     height: 40vh;
   }
 }
+
+@media(max-width:380px)
+{
+  .middle-container{
+   
+  }
+}

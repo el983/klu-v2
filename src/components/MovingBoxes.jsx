@@ -25,49 +25,7 @@ const MovingBoxes = () => {
   const handleMouseLeave = () => setIsPaused(false);
 
   // Drag functionality for gallery
-  useEffect(() => {
-    const gallery = galleryRef.current;
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    const handleMouseDown = (e) => {
-      isDown = true;
-      gallery.classList.add('active');
-      startX = e.pageX - gallery.offsetLeft;
-      scrollLeft = gallery.scrollLeft;
-    };
-
-    const handleMouseLeave = () => {
-      isDown = false;
-      gallery.classList.remove('active');
-    };
-
-    const handleMouseUp = () => {
-      isDown = false;
-      gallery.classList.remove('active');
-    };
-
-    const handleMouseMove = (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - gallery.offsetLeft;
-      const walk = (x - startX) * 1.5; // scroll speed multiplier
-      gallery.scrollLeft = scrollLeft - walk;
-    };
-
-    gallery.addEventListener('mousedown', handleMouseDown);
-    gallery.addEventListener('mouseleave', handleMouseLeave);
-    gallery.addEventListener('mouseup', handleMouseUp);
-    gallery.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      gallery.removeEventListener('mousedown', handleMouseDown);
-      gallery.removeEventListener('mouseleave', handleMouseLeave);
-      gallery.removeEventListener('mouseup', handleMouseUp);
-      gallery.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+  
 
   return (
     <>
