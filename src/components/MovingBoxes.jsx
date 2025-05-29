@@ -107,12 +107,52 @@ const MovingBoxes = () => {
       </div>
 
       {/* Draggable Image Gallery */}
-      <div className="gallery-container" ref={galleryRef}>
-        {images.map((src, index) => (
-          <div className="gallery-item" key={index}>
-            <img src={src} alt={`Image ${index + 1}`} />
+      <div className="middle-container">
+        
+        <div className="container-pic">
+          <div
+            className={`pic p ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={a} alt="" />
           </div>
-        ))}
+          <div
+            className={`pic q ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={b} alt="" />
+          </div>
+          <div
+            className={`pic r ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={c} alt="" />
+          </div>
+          <div
+            className={`pic s ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={d} alt="" />
+          </div>
+          <div
+            className={`pic e ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={e} alt="" />
+          </div>
+          <div
+            className={`pic f ${isPaused ? "paused" : ""}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={f} alt="" />
+          </div>
+        </div>
       </div>
 
       {/* Second Section (Heading + Moving Boxes) */}

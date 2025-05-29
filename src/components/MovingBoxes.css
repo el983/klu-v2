@@ -365,56 +365,88 @@
   }
 }
 
-.gallery-container {
+.middle-container{
+  /* display: flex; */
+  width: 100%;
+  height: 80vh;
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+.container-pic{
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  overflow-x: auto;
-  padding: 20px;
-  height: 70vh;
-  scroll-snap-type: x mandatory;
-  cursor: grab;
-  user-select: none;
-  scroll-behavior: smooth;
-  /* gap: 15px; */
-  background: rgb(0, 65, 0);
+  height: 80vh;
+  width: 100%;
+  /* background: blue; */
 }
-
-.gallery-container.active {
-  cursor: grabbing;
-}
-
-.gallery-container::-webkit-scrollbar {
-  height: 10px;
-  display: none;
-}
-
-.gallery-container::-webkit-scrollbar-thumb {
-  background: #999;
-  border-radius: 10px;
-}
-
-.gallery-item {
-  flex: 0 0 calc(100vw / 3 - 30px); /* 3 items visible at a time */
-  scroll-snap-align: start;
-}
-
-.gallery-item img {
-  width: 80%;
+.pic{
+  width: 23%;
   height: 60vh;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  /* background: red; */
+  position: absolute;
+    left: 100vw;
+    animation: moveBox 30s linear infinite;
+    border-radius: 10px;
+    color: rgb(28, 28, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .gallery-item {
-    flex: 0 0 calc(100vw / 2 - 30px);
+.pic img{
+  width: 100%;
+  height: 60vh;
+  /* object-fit: cover; */
+}
+.pic.paused {
+  animation-play-state: paused;
+}
+
+.p{
+  animation-delay: 0s;
+}
+.q{
+  animation-delay: 5s;
+}
+.r{
+  animation-delay: 10s;
+}
+.s{
+  animation-delay: 15s;
+}
+.e{
+  animation-delay: 20s;
+}
+.f{
+  animation-delay: 25s;
+}
+
+@keyframes moveBox {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -200px;
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-item {
-    flex: 0 0 calc(100vw - 30px);
+@media(max-width:450px){
+  .middle-container{
+    height: 60vh;
+  }
+  .container-pic{
+    height: 60vh;
+  }
+  .pic{
+    width: 40%;
+    height: 40vh;
+  }
+  .pic img{
+    height: 40vh;
   }
 }
